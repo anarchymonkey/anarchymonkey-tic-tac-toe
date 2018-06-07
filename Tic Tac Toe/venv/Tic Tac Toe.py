@@ -65,8 +65,6 @@ def winner_winner_chicken_dinner(board,mark):
     or board[1] == mark and board[2] == mark and board[3] == mark)
 
 
-winner_winner_chicken_dinner(test_board,'X')
-
 
 #  selecting Random winners
 
@@ -78,7 +76,6 @@ def choose_first():
         return 'Player 1'
 
 
-choose_first()
 
 
 #  check if the space is freely avialable or not
@@ -86,8 +83,6 @@ choose_first()
 def space_check(board,position):
     return board[position]==' '
 
-
-space_check(test_board,4)
 
 
 #  checks if the board is full or not
@@ -101,7 +96,6 @@ def check_board_full(board):
         else:
             return True
 
-check_board_full(test_board)
 #  now for the player choices
 
 def players_choice(board):
