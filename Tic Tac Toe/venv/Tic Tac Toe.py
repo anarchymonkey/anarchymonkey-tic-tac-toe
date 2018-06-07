@@ -41,8 +41,6 @@ def ask_XO():
         else:
             return ('O','X')
 
-ask_XO()
-
 
 #  Placing the marker if you are unsure of your position
 
