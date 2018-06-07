@@ -27,7 +27,6 @@ def make_play_board(board):
     print('   |   |')
 
 test_board = ['X', 'O', 'X', 'O', 'X', 'O', 'X','O','X','O'] #these are the markers set for testing
-make_play_board(test_board)
 
 #  Asking if the player wants to be X or an O , Baiscally selecting Player 1 for the game
 
