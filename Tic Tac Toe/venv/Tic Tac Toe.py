@@ -1,7 +1,7 @@
 #  Made By Aniket Batabyal @anarchymonkey
 #  Took help from  Udemy as part of the Python devoloper Bootcamp course
 #   All codes are made with Python 3.6x
-#   For furthur info contact me on github      LINK :  
+#   For furthur info contact me on github      LINK :  https://github.com/anarchymonkey
 
 
 
