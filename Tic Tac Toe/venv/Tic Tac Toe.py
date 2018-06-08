@@ -78,8 +78,8 @@ def choose_first():
 
 #  check if the space is freely avialable or not
 
-def space_check(board,position):
-    return board[position]==' '
+def space_check(board,pos):
+    return board[pos]==' '
 
 
 
