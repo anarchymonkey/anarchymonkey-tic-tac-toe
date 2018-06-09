@@ -37,16 +37,16 @@ def ask_XO():
         play = input('What do you wanna be X or O').upper()
 
         if marker == 'X':
-            return 'X', 'O'
+            return ('X','O')
         else:
-            return 'O', 'X'
+            return ('O','X')
 
 
 #  Placing the marker if you are unsure of your position
 
 
-def board_position_marker(board, marker, position):
-    board[position] = marker
+def board_position_marker(board, marker, pos):
+    board[pos] = marker
 
 
 #  Now Checking function  For the Winner
