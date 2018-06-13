@@ -4,9 +4,12 @@
 #   For furthur info contact me on github      LINK :  https://github.com/anarchymonkey
 
 
-import typing
-import string
 import random
+import colorama
+
+colorama.init()
+
+
 
 
 #  made the board with simple listing of data
@@ -34,7 +37,7 @@ def ask_XO():
     marker = ''
     while not (marker == 'X' or marker == 'O'):
         marker = ''
-        play = input('What do you wanna be X or O').upper()
+        play = input(colorama.Fore.GREEN + '\n What do you wanna be X or O \n').upper()
 
         if marker == 'X':
             return ('X','O')
@@ -94,16 +97,16 @@ def check_board_full(board):
 def players_choice(board):
     position = 0
     while position not in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] or not space_check(board, position):
-        position = int(input('Please Enter your choice for the next pos (1-9)'))
+        position = int(input('Please Enter your choice for the next pos (1-9) \t'))
 
     return position
 
 
 def replay():
-    return input('Do you want to play again sir? Enter Yes or no').lower().startswith('y')
+    return input('Do you want to play again sir?\nEnter --> y/n : ').lower().startswith('y')
 
 
-print('WELCOME SIRRRRR TO TICCC TACCCC TOEEEEEEEE')
+print('\nWELCOME  TO TICCC TACCCC TOEEEEEEEE \n')
 
 while True:
     pass
@@ -114,9 +117,9 @@ while True:
 
     turn = choose_first()  # turn will be decided for Player 1 or 2
 
-    print(turn + 'Will Go First! ALL THE BEST')
+    print(turn + '\n ^Will Go First! ALL THE BEST\n')
 
-    play_game = input('Are you ready to play??????,Enter YES or NO')
+    play_game = input('\nAre you ready to play?\n\tEnter Y/N:-> \n')
 
     if play_game.lower() == 'y':
 
@@ -139,7 +142,7 @@ while True:
             if (winner_winner_chicken_dinner(test_board, position)):  # if player 1 is the winner
                 check_board_full(test_board)  # check if the board is full
                 make_play_board(test_board)  # display the board
-                print('Congrats You Have won the game')
+                print('Player 1 is the winner')
                 game_on = False  # return to yes no screen
 
             else:  # it will be a draw
@@ -160,7 +163,7 @@ while True:
             if winner_winner_chicken_dinner(test_board,
                                             player2_marker):  # if player 2 wins, this function checks for the winners
                 make_play_board(test_board)
-                print('PLAYER 2 IS THE WINNER  ')
+                print(colorama.Fore.RED+ '\nPLAYER 2 IS THE WINNER\n')
                 game_on = False  # End
 
             else:
